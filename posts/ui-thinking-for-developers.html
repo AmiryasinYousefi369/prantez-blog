@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>طراحی رابط کاربری از نگاه یک برنامه‌نویس — پرانتز</title>
+<meta name="description" content="چرا فهمیدن چند اصل ساده‌ی طراحی، کار هر برنامه‌نویس فرانت‌اند را بهتر می‌کند.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2312141a'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle' fill='%23c6f135' font-family='monospace'%3E()%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="row">
+    <a href="../index.html" class="brand">پرانتز<span>()</span></a>
+    <ul>
+      <li><a href="../index.html#posts">مقالات</a></li>
+      <li><a href="../index.html#about">درباره من</a></li>
+      <li><a href="../index.html#contact">تماس</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="wrap">
+    <a class="back" href="../index.html#posts">← بازگشت به مقالات</a>
+    <div class="article-meta">
+      <span class="tag">وب‌دیزاین</span>
+      <span class="date">1405/06/30</span>
+      <span>·</span>
+      <span>۶ دقیقه مطالعه</span>
+    </div>
+    <h1>طراحی رابط کاربری از نگاه یک برنامه‌نویس</h1>
+    <p class="dek">فهمیدن چند اصل ساده‌ی طراحی، لازم نیست از یک برنامه‌نویس، طراح بسازد؛ اما تصمیم‌های روزمره‌ی کدنویسی‌اش را قابل‌توجه بهتر می‌کند.</p>
+  </div>
+</header>
+
+<article class="content wrap">
+
+  <p>خیلی از برنامه‌نویس‌ها طراحی را «کار یک نفر دیگر» می‌دانند؛ چیزی که در فایل فیگما تحویل می‌گیرند و فقط باید پیاده‌سازی‌اش کنند. این نگاه در بیشتر تیم‌ها درست است، اما یک مشکل دارد: خیلی از تصمیم‌های طراحی، دقیقاً همان‌جایی گرفته می‌شوند که کد نوشته می‌شود. فاصله‌ی بین دو دکمه، حالت خالی یک لیست، پیام خطا وقتی چیزی درست کار نمی‌کند؛ این‌ها معمولاً در فایل طراحی نیستند و باید همان لحظه تصمیم گرفته شوند.</p>
+
+  <h2>طراحی یعنی تصمیم، نه تزیین</h2>
+  <p>خیلی وقت‌ها «طراحی خوب» را با رنگ‌های شیک یا سایه‌های نرم اشتباه می‌گیریم. اما بخش اصلی طراحی، تصمیم‌گیری درباره‌ی رفتار است: وقتی کاربر روی دکمه‌ای کلیک می‌کند که کند است، چه اتفاقی می‌افتد؟ وقتی فرم خالی است، صفحه چه چیزی نشان می‌دهد؟ این تصمیم‌ها را معمولاً کسی می‌گیرد که کد را می‌نویسد، چون او بهتر از هرکس دیگری می‌داند سیستم در آن لحظه دقیقاً چه حالتی دارد.</p>
+
+  <blockquote>یک رابط کاربری خوب، همیشه به کاربر می‌گوید الان کجای کار هستد و قدم بعدی چیست.</blockquote>
+
+  <h2>سه سؤال ساده قبل از نوشتن کد رابط کاربری</h2>
+  <p>قبل از این‌که یک کامپوننت جدید بسازید، سه سؤال می‌تواند خیلی از تصمیم‌های بعدی را ساده کند:</p>
+  <ul>
+    <li>کاربر با دیدن این بخش، چه کاری باید انجام دهد؟</li>
+    <li>اگر داده‌ای برای نمایش نبود، این بخش چه چیزی نشان می‌دهد؟</li>
+    <li>اگر عملیات با خطا مواجه شد، پیام چه چیزی می‌گوید و چه کاری پیشنهاد می‌دهد؟</li>
+  </ul>
+  <p>این سؤال‌ها ساده‌اند، اما جواب دادن به آن‌ها قبل از کدنویسی، از بازنویسی چند باره‌ی یک کامپوننت جلوگیری می‌کند.</p>
+
+  <h2>یک مثال کوچک</h2>
+  <p>فرض کنید در حال ساخت یک دکمه‌ی ارسال فرم هستید. نسخه‌ی اول کد فقط حالت عادی را در نظر می‌گیرد؛ اما یک رابط کاربری فکرشده، حداقل سه حالت دیگر هم دارد:</p>
+
+  <pre><code>&lt;button
+  disabled={isSubmitting}
+  aria-busy={isSubmitting}
+&gt;
+  {isSubmitting ? "در حال ارسال…" : "ثبت فرم"}
+&lt;/button&gt;
+</code></pre>
+
+  <p>همین چند خط، سه تصمیم طراحی را در خودش دارد: جلوگیری از ارسال دوباره، نمایش وضعیت به کاربر، و در دسترس نگه‌داشتن این وضعیت برای صفحه‌خوان‌ها. هیچ‌کدام از این‌ها لزوماً در فایل طراحی نبوده‌اند؛ نتیجه‌ی این هستند که کسی که کد را می‌نویسد، به رفتار واقعی سیستم فکر کرده است.</p>
+
+  <h2>جمع‌بندی</h2>
+  <p>یاد گرفتن طراحی به‌عنوان یک برنامه‌نویس، به معنای تبدیل شدن به طراح نیست. به معنای این است که بفهمید چرا فاصله‌ها، حالت‌ها و پیام‌های یک رابط کاربری مهم‌اند، تا وقتی خودتان در حال نوشتن آن‌ها هستید، تصمیم بهتری بگیرید.</p>
+
+</article>
+
+<div class="article-footer wrap">
+  <div class="author-chip">
+    <span class="dot">AY</span>
+    <span>نوشته‌ی امیریاسین یوسفی</span>
+  </div>
+  <a class="back" href="../index.html#posts">← بازگشت به مقالات</a>
+</div>
+
+<footer id="contact">
+  <div class="wrap row">
+    <ul class="footer-links">
+      <li><a href="mailto:amiryasin@example.com">ایمیل</a></li>
+      <li><a href="https://github.com/">گیت‌هاب</a></li>
+      <li><a href="https://linkedin.com/">لینکدین</a></li>
+    </ul>
+    <span class="copyright">© <span id="year">1405</span> Amiryasin Yousefi — parantez.dev</span>
+  </div>
+</footer>
+
+<script src="../assets/script.js"></script>
+</body>
+</html>

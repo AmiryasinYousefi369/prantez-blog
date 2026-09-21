@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>جاوااسکریپت یا تایپ‌اسکریپت؛ کدام را انتخاب کنیم؟ — پرانتز</title>
+<meta name="description" content="نگاهی صادقانه به مزایا و هزینه‌ی اضافه کردن تایپ به یک پروژه‌ی جاوااسکریپتی.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2312141a'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle' fill='%23c6f135' font-family='monospace'%3E()%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="row">
+    <a href="../index.html" class="brand">پرانتز<span>()</span></a>
+    <ul>
+      <li><a href="../index.html#posts">مقالات</a></li>
+      <li><a href="../index.html#about">درباره من</a></li>
+      <li><a href="../index.html#contact">تماس</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="article-header">
+  <div class="wrap">
+    <a class="back" href="../index.html#posts">← بازگشت به مقالات</a>
+    <div class="article-meta">
+      <span class="tag">جاوااسکریپت</span>
+      <span class="date">1405/06/02</span>
+      <span>·</span>
+      <span>۷ دقیقه مطالعه</span>
+    </div>
+    <h1>جاوااسکریپت یا تایپ‌اسکریپت؛ کدام را انتخاب کنیم؟</h1>
+    <p class="dek">تایپ‌اسکریپت جادو نیست؛ یک لایه‌ی اضافه روی جاوااسکریپت است که یک دسته از خطاها را زودتر نشان می‌دهد. سؤال واقعی این است که این لایه، کِی ارزشش را دارد.</p>
+  </div>
+</header>
+
+<article class="content wrap">
+
+  <p>هر بار که این سؤال پرسیده می‌شود، معمولاً جواب به یک بحث احساسی تبدیل می‌شود: «تایپ‌اسکریپت همه‌چیز را حل می‌کند» در برابر «تایپ‌اسکریپت فقط پیچیدگی اضافه می‌کند». واقعیت جایی وسط این دو است. تایپ‌اسکریپت، جاوااسکریپت را کند یا سریع نمی‌کند؛ چون در نهایت به همان جاوااسکریپت کامپایل می‌شود. کاری که انجام می‌دهد این است که قبل از اجرای کد، درباره‌ی شکل داده‌ها به شما هشدار می‌دهد.</p>
+
+  <h2>چه چیزی واقعاً عوض می‌شود</h2>
+  <p>فرض کنید تابعی دارید که یک آبجکت کاربر می‌گیرد و نام او را برمی‌گرداند. در جاوااسکریپت خالص:</p>
+
+  <pre><code>function getName(user) {
+  return user.fullName;
+}
+</code></pre>
+
+  <p>اگر جایی در کد، آبجکتی بدون فیلد fullName به این تابع پاس داده شود، تا وقتی برنامه اجرا نشود متوجه نمی‌شوید. حالا همین تابع در تایپ‌اسکریپت:</p>
+
+  <pre><code>type User = {
+  fullName: string;
+  email: string;
+};
+
+function getName(user: User): string {
+  return user.fullName;
+}
+</code></pre>
+
+  <p>حالا اگر جایی سعی کنید آبجکتی بدون fullName بفرستید، همان لحظه‌ی نوشتن کد، ویرایشگر به شما خبر می‌دهد؛ نه وسط استفاده‌ی کاربر واقعی از برنامه.</p>
+
+  <h2>هزینه‌ی این امنیت</h2>
+  <p>این امنیت رایگان نیست. باید تایپ‌ها را تعریف کنید، گاهی با کتابخانه‌هایی سروکار دارید که تایپ ندارند، و منحنی یادگیری اولیه‌ای هم وجود دارد؛ مخصوصاً وقتی generics وارد ماجرا می‌شوند. برای یک اسکریپت کوچک یا یک پروتوتایپ سریع، این هزینه معمولاً ارزشش را ندارد.</p>
+
+  <blockquote>قانون کلی: هرچه پروژه بزرگ‌تر، تیم چندنفره‌تر و عمر پروژه طولانی‌تر باشد، سود تایپ‌اسکریپت بیشتر از هزینه‌اش می‌شود.</blockquote>
+
+  <h2>یک راه میانه</h2>
+  <p>لازم نیست همه‌چیز یا سیاه باشد یا سفید. می‌شود یک پروژه‌ی جاوااسکریپتی را با JSDoc کمی تایپ‌دار کرد، بدون این‌که کل ابزار کامپایل عوض شود:</p>
+
+  <pre><code>/**
+ * @param {{ fullName: string }} user
+ * @returns {string}
+ */
+function getName(user) {
+  return user.fullName;
+}
+</code></pre>
+
+  <p>این روش، بخشی از مزایای تایپ‌اسکریپت را بدون تغییر کامل زیرساخت پروژه می‌دهد؛ گزینه‌ی خوبی برای پروژه‌های قدیمی‌تر که مهاجرت کامل به آن‌ها زمان‌بر است.</p>
+
+  <h2>جمع‌بندی</h2>
+  <p>تایپ‌اسکریپت را نه به‌عنوان یک ابزار «بهتر» بلکه به‌عنوان یک ابزار «مناسب برای موقعیت درست» ببینید. برای پروژه‌های کوچک و شخصی، جاوااسکریپت خالص کافی است. برای پروژه‌هایی که قرار است چند نفر روی آن‌ها کار کنند و سال‌ها زنده بمانند، تایپ‌اسکریپت معمولاً انتخاب بهتری است.</p>
+
+</article>
+
+<div class="article-footer wrap">
+  <div class="author-chip">
+    <span class="dot">AY</span>
+    <span>نوشته‌ی امیریاسین یوسفی</span>
+  </div>
+  <a class="back" href="../index.html#posts">← بازگشت به مقالات</a>
+</div>
+
+<footer id="contact">
+  <div class="wrap row">
+    <ul class="footer-links">
+      <li><a href="mailto:amiryasin@example.com">ایمیل</a></li>
+      <li><a href="https://github.com/">گیت‌هاب</a></li>
+      <li><a href="https://linkedin.com/">لینکدین</a></li>
+    </ul>
+    <span class="copyright">© <span id="year">1405</span> Amiryasin Yousefi — parantez.dev</span>
+  </div>
+</footer>
+
+<script src="../assets/script.js"></script>
+</body>
+</html>
