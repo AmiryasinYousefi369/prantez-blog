@@ -115,7 +115,7 @@
       addLine('Projects:', 'head');
       addBlank();
       addLine('  01  ArioShop ', 'gold');
-      addLine('      PHP . lravel . Html . css . JS');
+      addLine('      PHP . laravel . Html . css . JS');
       addLine('      Full online store with cart, filtering and checkout.');
       addBlank();
       addLine('  02  flask projects', 'gold');
@@ -133,7 +133,7 @@
       addLine('Reach me at:', 'head');
       addLine('  email     — <a class="link" href="mailto:tonystarkicu1@gmail.com">tonystarkicu1@gmail.com</a>');
       addLine('  github    — <a class="link" href="https://github.com/AmiryasinYousefi369" target="_blank" rel="noopener">github.com/</a>');
-      addLine('  linkedin  — <a class="link" href="https://linkedin.com/" target="_blank" rel="noopener">linkedin.com/</a>');
+      addLine('  linkedin  — <a class="link" href="https://www.linkedin.com/in/amiryasin-yousefi-ts/" target="_blank" rel="noopener">linkedin.com/</a>');
       addBlank();
     },
     whoami: function () {
