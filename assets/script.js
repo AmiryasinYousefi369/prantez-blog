@@ -107,32 +107,32 @@
     },
     skills: function () {
       addLine('Toolkit:', 'head');
-      var skills = ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Git', 'REST APIs', 'UI Design', 'Responsive Design'];
+      var skills = ['HTML', 'CSS', 'JavaScript', 'python', 'PHP', 'laravel'];
       addLine('  ' + skills.join('  ·  '));
       addBlank();
     },
     projects: function () {
       addLine('Projects:', 'head');
       addBlank();
-      addLine('  01  E-Commerce Store', 'gold');
-      addLine('      React · Redux · Stripe');
+      addLine('  01  ArioShop ', 'gold');
+      addLine('      PHP . lravel . Html . css . JS');
       addLine('      Full online store with cart, filtering and checkout.');
       addBlank();
-      addLine('  02  Task Manager', 'gold');
-      addLine('      React · Firebase');
-      addLine('      Team task app with live sync and shared boards.');
+      addLine('  02  flask projects', 'gold');
+      addLine('      Python . Flask');
+      addLine('      create web site or http local sever with FLASK');
       addBlank();
-      addLine('  03  Weather Dashboard', 'gold');
-      addLine('      JavaScript · REST API · Chart.js');
-      addLine('      Multi-city weather with interactive charts.');
+      addLine('  03  jarvis Bot', 'gold');
+      addLine('      JavaScript · python ');
+      addLine('      create bot for Hack.chat site');
       addBlank();
       addLine('  (placeholders — swap in real project links)', 'muted');
       addBlank();
     },
     contact: function () {
       addLine('Reach me at:', 'head');
-      addLine('  email     — <a class="link" href="mailto:tony@example.com">tony@example.com</a>');
-      addLine('  github    — <a class="link" href="https://github.com/" target="_blank" rel="noopener">github.com/</a>');
+      addLine('  email     — <a class="link" href="mailto:tonystarkicu1@gmail.com">tonystarkicu1@gmail.com</a>');
+      addLine('  github    — <a class="link" href="https://github.com/AmiryasinYousefi369" target="_blank" rel="noopener">github.com/</a>');
       addLine('  linkedin  — <a class="link" href="https://linkedin.com/" target="_blank" rel="noopener">linkedin.com/</a>');
       addBlank();
     },
